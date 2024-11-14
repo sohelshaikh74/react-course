@@ -1,6 +1,11 @@
-import "./index.css";
+import Todo from "./comopnents/Todo";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <Todo />
+    </div>
+  );
 };
 
 export default App;
