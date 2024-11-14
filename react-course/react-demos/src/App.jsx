@@ -4,11 +4,11 @@ import MainContent from "./components/MainContent";
 
 const App = () => {
   return (
-    <section>
+    <>
       <Header />
       <MainContent />
       <Footer />
-    </section>
+    </>
   );
 };
 
