@@ -7,7 +7,6 @@ const Header = () => {
           <a href="">Home</a>
           <a href="">About</a>
           <a href="">Contact</a>
-          <a href="">Service</a>
         </nav>
       </header>
     </>
