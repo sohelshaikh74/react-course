@@ -4,12 +4,20 @@
 // import List from "./components/lists/List";
 // import ProductList from "./components/lists/ProductList";
 // import UserList from "./components/lists/UserList";
-import UserStatus from "./components/conditional-rendering/exercise/UserStatus";
-import Password from "./components/conditional-rendering/Password";
-import Wheather from "./components/conditional-rendering/Wheather";
-import Card from "./components/props/Card";
-import Parent from "./components/props/Parent";
-import Parent2 from "./components/props/Parent2";
+// import UserStatus from "./components/conditional-rendering/exercise/UserStatus";
+// import Password from "./components/conditional-rendering/Password";
+// import Card from "./components/props/Card";
+// import Parent from "./components/props/Parent";
+// import Parent2 from "./components/props/Parent2";
+
+import Pract from "./components/conditional-rendering/exercise/Pract";
+import Demo from "./components/style/Demo";
+
+// import Greeting from "./components/conditional-rendering/exercise/Greeting";
+// import Pract from "./components/conditional-rendering/exercise/Pract";
+// import Practice from "./components/conditional-rendering/exercise/Practice";
+// import UseStatus from "./components/conditional-rendering/exercise/UseStatus";
+// import Wheather from "./components/conditional-rendering/exercise/Wheather";
 
 // ***conditional rendering
 
@@ -45,8 +53,6 @@ import Parent2 from "./components/props/Parent2";
 //     </div>
 //   );
 // };
-
-const temperature = 30;
 
 const App = () => {
   return (
@@ -88,8 +94,13 @@ const App = () => {
       {/* <Cart /> */}
       {/* <Password isValid={true} /> */}
       {/* **expersice */}
-      <Wheather temperature={temperature} />
-      <UserStatus loggedIn={true} isAdmin="welcome Admin" />
+      {/* <Wheather /> */}
+      {/* <UseStatus loggedIn={true} isAdmin={false} /> */}
+      {/* <Greeting timeOfDay="afternoon" /> */}
+      {/* <Pract timeOfDay="afternoon" /> */}
+
+      {/* ***Styling */}
+      <Demo />
     </section>
   );
 };
