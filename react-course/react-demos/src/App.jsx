@@ -11,7 +11,15 @@
 // import Parent2 from "./components/props/Parent2";
 
 import Pract from "./components/conditional-rendering/exercise/Pract";
+import Button from "./components/events/Button";
+import Copy from "./components/events/Copy";
+import Move from "./components/events/Move";
+import FirstUseState from "./components/hooks/FirstUseState";
+import ReactIcons from "./components/react-icons/ReactIcons";
 import Demo from "./components/style/Demo";
+import IconComponent from "./components/style/styleExcer/IconComponent";
+import ProfileCard from "./components/style/styleExcer/ProfileCard";
+import StyleCard from "./components/style/styleExcer/StyleCard";
 
 // import Greeting from "./components/conditional-rendering/exercise/Greeting";
 // import Pract from "./components/conditional-rendering/exercise/Pract";
@@ -97,10 +105,25 @@ const App = () => {
       {/* <Wheather /> */}
       {/* <UseStatus loggedIn={true} isAdmin={false} /> */}
       {/* <Greeting timeOfDay="afternoon" /> */}
-      {/* <Pract timeOfDay="afternoon" /> */}
+      {/* <Pract timeOfDay="morning" /> */}
 
       {/* ***Styling */}
-      <Demo />
+      {/* <Demo /> */}
+      {/* exercise  */}
+      {/* <StyleCard /> */}
+      {/* <ProfileCard /> */}
+      {/* <IconComponent /> */}
+
+      {/* **** React-icons */}
+      {/* <ReactIcons /> */}
+
+      {/* ****Events */}
+      {/* <Button /> */}
+      {/* <Copy /> */}
+      {/* <Move /> */}
+
+      {/* *** HOOKS */}
+      <FirstUseState />
     </section>
   );
 };
