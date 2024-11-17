@@ -10,21 +10,26 @@
 // import Parent from "./components/props/Parent";
 // import Parent2 from "./components/props/Parent2";
 
-import Pract from "./components/conditional-rendering/exercise/Pract";
-import Button from "./components/events/Button";
-import Copy from "./components/events/Copy";
-import Move from "./components/events/Move";
-import ArrayWithObjects from "./components/hooks/ArrayWithObjects";
-import FirstUseState from "./components/hooks/FirstUseState";
-import PracticeHooks from "./components/hooks/hooksPractice/PracticeHooks";
-import UseStateWithArray from "./components/hooks/UseStateWithArray";
-import WithArray from "./components/hooks/UseStateWithArray";
-import UseStateWithObject from "./components/hooks/UseStateWithObject";
-import ReactIcons from "./components/react-icons/ReactIcons";
-import Demo from "./components/style/Demo";
-import IconComponent from "./components/style/styleExcer/IconComponent";
-import ProfileCard from "./components/style/styleExcer/ProfileCard";
-import StyleCard from "./components/style/styleExcer/StyleCard";
+// import Pract from "./components/conditional-rendering/exercise/Pract";
+// import Button from "./components/events/Button";
+// import Copy from "./components/events/Copy";
+// import Move from "./components/events/Move";
+// import ArrayWithObjects from "./components/hooks/ArrayWithObjects";
+// import FirstUseState from "./components/hooks/FirstUseState";
+// import PracticeHooks from "./components/hooks/hooksPractice/PracticeHooks";
+// import UseStateWithArray from "./components/hooks/UseStateWithArray";
+// import WithArray from "./components/hooks/UseStateWithArray";
+// import UseStateWithObject from "./components/hooks/UseStateWithObject";
+// import ReactIcons from "./components/react-icons/ReactIcons";
+// import ComponentOne from "./components/(Props)sharingState/ComponentOne";
+// import ComponentTwo from "./components/(Props)sharingState/ComponentTwo";
+// import Demo from "./components/style/Demo";
+// import IconComponent from "./components/style/styleExcer/IconComponent";
+// import ProfileCard from "./components/style/styleExcer/ProfileCard";
+// import StyleCard from "./components/style/styleExcer/StyleCard";
+import { useState } from "react";
+import ComponentOne from "./components/stateSharing/ComponentOne";
+import ComponentTwo from "./components/stateSharing/ComponentTwo";
 
 // import Greeting from "./components/conditional-rendering/exercise/Greeting";
 // import Pract from "./components/conditional-rendering/exercise/Pract";
@@ -68,6 +73,9 @@ import StyleCard from "./components/style/styleExcer/StyleCard";
 // };
 
 const App = () => {
+  // %%%%% PORPS ^^^^^
+
+  const [count, setCount] = useState(0);
   return (
     <section>
       {/* <form>
@@ -131,9 +139,13 @@ const App = () => {
       {/* <FirstUseState /> */}
       {/* <UseStateWithArray /> */}
       {/* <UseStateWithObject /> */}
-      <ArrayWithObjects />
+      {/* <ArrayWithObjects /> */}
       {/* Hooks Practice */}
       {/* <PracticeHooks /> */}
+
+      {/* ***PROPS Sharing data to component  */}
+      <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} />
+      <ComponentTwo />
     </section>
   );
 };
