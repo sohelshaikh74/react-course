@@ -14,7 +14,12 @@ import Pract from "./components/conditional-rendering/exercise/Pract";
 import Button from "./components/events/Button";
 import Copy from "./components/events/Copy";
 import Move from "./components/events/Move";
+import ArrayWithObjects from "./components/hooks/ArrayWithObjects";
 import FirstUseState from "./components/hooks/FirstUseState";
+import PracticeHooks from "./components/hooks/hooksPractice/PracticeHooks";
+import UseStateWithArray from "./components/hooks/UseStateWithArray";
+import WithArray from "./components/hooks/UseStateWithArray";
+import UseStateWithObject from "./components/hooks/UseStateWithObject";
 import ReactIcons from "./components/react-icons/ReactIcons";
 import Demo from "./components/style/Demo";
 import IconComponent from "./components/style/styleExcer/IconComponent";
@@ -123,7 +128,12 @@ const App = () => {
       {/* <Move /> */}
 
       {/* *** HOOKS */}
-      <FirstUseState />
+      {/* <FirstUseState /> */}
+      {/* <UseStateWithArray /> */}
+      {/* <UseStateWithObject /> */}
+      <ArrayWithObjects />
+      {/* Hooks Practice */}
+      {/* <PracticeHooks /> */}
     </section>
   );
 };
