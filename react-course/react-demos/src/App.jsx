@@ -27,7 +27,7 @@
 // import IconComponent from "./components/style/styleExcer/IconComponent";
 // import ProfileCard from "./components/style/styleExcer/ProfileCard";
 // import StyleCard from "./components/style/styleExcer/StyleCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ComponentOne from "./components/stateSharing/ComponentOne";
 import ComponentTwo from "./components/stateSharing/ComponentTwo";
 import Example from "./components/Example";
@@ -36,6 +36,13 @@ import ExampleThree from "./components/stateSharing/ExampleThree";
 import Counter from "./components/stateSharing/useStateChallange/Counter";
 import TodoList from "./components/stateSharing/useStateChallange/TodoList";
 import TodoListPractice from "./components/stateSharing/useStateChallange/TodoListPractice";
+import Profile from "./components/stateSharing/useStateChallange/Profile";
+import ShoppingList from "./components/stateSharing/useStateChallange/ShoppingList";
+import CopyInput from "./components/portal/CopyInput";
+import UseEffectExample from "./components/hooks/useEffect/UseEffectExample";
+import BasicEffect from "./components/hooks/useEffect/useEffectChallange/BasicEffect";
+import CounterEffet from "./components/hooks/useEffect/useEffectChallange/CounterEffet";
+import FetchDataEffect from "./components/hooks/useEffect/useEffectChallange/FetchDataEffect";
 
 // import Greeting from "./components/conditional-rendering/exercise/Greeting";
 // import Pract from "./components/conditional-rendering/exercise/Pract";
@@ -81,9 +88,22 @@ import TodoListPractice from "./components/stateSharing/useStateChallange/TodoLi
 const App = () => {
   // %%%%% PORPS ^^^^^
 
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
-  const [counter, setCounter] = useState(0);
+  // const [counter, setCounter] = useState(0);
+
+  // ############# IMPORTANT ##########
+  // UseEffect Examples
+  // const [value, setValue] = useState(0);
+  // const [something, setSomething] = useState(0);
+  // // if (value > 0) {   //we cannot wrappe hook in any condition
+  // useEffect(() => {
+  //   if (value > 0) {
+  //     console.log("useEffect Called");
+  //     document.title = `Increment${value}`;
+  //   }
+  // }, [value, something]);
+  // // }   //you can use condition in side hook
 
   return (
     <section>
@@ -160,8 +180,27 @@ const App = () => {
       {/* <ExampleThree /> */}
       {/* Exercise */}
       {/* <Counter /> */}
-      <TodoList />
-      <TodoListPractice />
+      {/* <TodoList /> */}
+      {/* <TodoListPractice /> */}
+      {/* <ShoppingList /> */}
+      {/* <Profile /> */}
+
+      {/* ***Portal */}
+      {/* <CopyInput /> */}
+
+      {/*  ***useEffect()  */}
+
+      {/* <h1>{value}</h1>
+      <button onClick={() => setValue(value + 1)}>Click me</button>
+      <button onClick={() => setSomething(something + 1)}>
+      Inrement By Something
+      </button> */}
+      {/* <UseEffectExample /> */}
+
+      {/* ****UseEffect practice  */}
+      {/* <BasicEffect /> */}
+      {/* <CounterEffet /> */}
+      <FetchDataEffect />
     </section>
   );
 };
