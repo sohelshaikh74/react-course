@@ -10,6 +10,8 @@
 // import Parent from "./components/props/Parent";
 // import Parent2 from "./components/props/Parent2";
 
+import ComponentA from "./components/propsDriling/ComponentA";
+
 // import Pract from "./components/conditional-rendering/exercise/Pract";
 // import Button from "./components/events/Button";
 // import Copy from "./components/events/Copy";
@@ -27,22 +29,22 @@
 // import IconComponent from "./components/style/styleExcer/IconComponent";
 // import ProfileCard from "./components/style/styleExcer/ProfileCard";
 // import StyleCard from "./components/style/styleExcer/StyleCard";
-import { useEffect, useState } from "react";
-import ComponentOne from "./components/stateSharing/ComponentOne";
-import ComponentTwo from "./components/stateSharing/ComponentTwo";
-import Example from "./components/Example";
-import StatePractice from "./components/stateSharing/StatePractice";
-import ExampleThree from "./components/stateSharing/ExampleThree";
-import Counter from "./components/stateSharing/useStateChallange/Counter";
-import TodoList from "./components/stateSharing/useStateChallange/TodoList";
-import TodoListPractice from "./components/stateSharing/useStateChallange/TodoListPractice";
-import Profile from "./components/stateSharing/useStateChallange/Profile";
-import ShoppingList from "./components/stateSharing/useStateChallange/ShoppingList";
-import CopyInput from "./components/portal/CopyInput";
-import UseEffectExample from "./components/hooks/useEffect/UseEffectExample";
-import BasicEffect from "./components/hooks/useEffect/useEffectChallange/BasicEffect";
-import CounterEffet from "./components/hooks/useEffect/useEffectChallange/CounterEffet";
-import FetchDataEffect from "./components/hooks/useEffect/useEffectChallange/FetchDataEffect";
+// import { useEffect, useState } from "react";
+// import ComponentOne from "./components/stateSharing/ComponentOne";
+// import ComponentTwo from "./components/stateSharing/ComponentTwo";
+// import Example from "./components/Example";
+// import StatePractice from "./components/stateSharing/StatePractice";
+// import ExampleThree from "./components/stateSharing/ExampleThree";
+// import Counter from "./components/stateSharing/useStateChallange/Counter";
+// import TodoList from "./components/stateSharing/useStateChallange/TodoList";
+// import TodoListPractice from "./components/stateSharing/useStateChallange/TodoListPractice";
+// import Profile from "./components/stateSharing/useStateChallange/Profile";
+// import ShoppingList from "./components/stateSharing/useStateChallange/ShoppingList";
+// import CopyInput from "./components/portal/CopyInput";
+// import UseEffectExample from "./components/hooks/useEffect/UseEffectExample";
+// import BasicEffect from "./components/hooks/useEffect/useEffectChallange/BasicEffect";
+// import CounterEffet from "./components/hooks/useEffect/useEffectChallange/CounterEffet";
+// import FetchDataEffect from "./components/hooks/useEffect/useEffectChallange/FetchDataEffect";
 
 // import Greeting from "./components/conditional-rendering/exercise/Greeting";
 // import Pract from "./components/conditional-rendering/exercise/Pract";
@@ -104,6 +106,9 @@ const App = () => {
   //   }
   // }, [value, something]);
   // // }   //you can use condition in side hook
+
+  // ##### PROS DRILING
+  const name = "jhon";
 
   return (
     <section>
@@ -200,7 +205,11 @@ const App = () => {
       {/* ****UseEffect practice  */}
       {/* <BasicEffect /> */}
       {/* <CounterEffet /> */}
-      <FetchDataEffect />
+      {/* <FetchDataEffect /> */}
+
+      {/* ### porps driling */}
+      {/* name data pass to ComponentA==> ComponentB==> componentC==>(output) */}
+      <ComponentA name={name} />
     </section>
   );
 };
