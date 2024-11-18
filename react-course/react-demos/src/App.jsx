@@ -31,6 +31,11 @@ import { useState } from "react";
 import ComponentOne from "./components/stateSharing/ComponentOne";
 import ComponentTwo from "./components/stateSharing/ComponentTwo";
 import Example from "./components/Example";
+import StatePractice from "./components/stateSharing/StatePractice";
+import ExampleThree from "./components/stateSharing/ExampleThree";
+import Counter from "./components/stateSharing/useStateChallange/Counter";
+import TodoList from "./components/stateSharing/useStateChallange/TodoList";
+import TodoListPractice from "./components/stateSharing/useStateChallange/TodoListPractice";
 
 // import Greeting from "./components/conditional-rendering/exercise/Greeting";
 // import Pract from "./components/conditional-rendering/exercise/Pract";
@@ -77,6 +82,9 @@ const App = () => {
   // %%%%% PORPS ^^^^^
 
   const [count, setCount] = useState(0);
+
+  const [counter, setCounter] = useState(0);
+
   return (
     <section>
       {/* <form>
@@ -147,7 +155,13 @@ const App = () => {
       {/* ***PROPS Sharing data to component  */}
       {/* <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} /> */}
       {/* <ComponentTwo count={count} onClickHandler={() => setCount(count - 1)} /> */}
-      <Example />
+      {/* <Example /> */}
+      {/* <StatePractice number={counter} setCounter={setCounter} /> */}
+      {/* <ExampleThree /> */}
+      {/* Exercise */}
+      {/* <Counter /> */}
+      <TodoList />
+      <TodoListPractice />
     </section>
   );
 };
