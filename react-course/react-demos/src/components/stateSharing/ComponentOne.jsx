@@ -10,4 +10,3 @@ const ComponentOne = ({ count, onClickHandler }) => {
 };
 
 export default ComponentOne;
-g;

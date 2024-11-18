@@ -30,6 +30,7 @@
 import { useState } from "react";
 import ComponentOne from "./components/stateSharing/ComponentOne";
 import ComponentTwo from "./components/stateSharing/ComponentTwo";
+import Example from "./components/Example";
 
 // import Greeting from "./components/conditional-rendering/exercise/Greeting";
 // import Pract from "./components/conditional-rendering/exercise/Pract";
@@ -144,8 +145,9 @@ const App = () => {
       {/* <PracticeHooks /> */}
 
       {/* ***PROPS Sharing data to component  */}
-      <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} />
-      <ComponentTwo />
+      {/* <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} /> */}
+      {/* <ComponentTwo count={count} onClickHandler={() => setCount(count - 1)} /> */}
+      <Example />
     </section>
   );
 };
