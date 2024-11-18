@@ -2,6 +2,9 @@ import { useState } from "react";
 
 const TodoList = () => {
   const [todo, setTodo] = useState([]);
+
+  //   state variable(inputValue)
+  // updater function (setInputValue)
   const [inputValue, setInputValue] = useState("");
 
   const handleClick = (e) => {
@@ -20,7 +23,7 @@ const TodoList = () => {
       <form onSubmit={submitHandler}>
         <input
           type="text"
-          value={inputValue}
+          value={inputValue} //value={inputValue} binds the value of the input field to the inputValue state. This is known as controlled input.
           onChange={handleClick}
           placeholder="Add A new Todo"
         />
