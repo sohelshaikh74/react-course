@@ -10,6 +10,7 @@
 // import Parent from "./components/props/Parent";
 // import Parent2 from "./components/props/Parent2";
 
+import Home from "./components/contextApi/Home";
 import ComponentA from "./components/propsDriling/ComponentA";
 
 // import Pract from "./components/conditional-rendering/exercise/Pract";
@@ -209,7 +210,10 @@ const App = () => {
 
       {/* ### porps driling */}
       {/* name data pass to ComponentA==> ComponentB==> componentC==>(output) */}
-      <ComponentA name={name} />
+      {/* <ComponentA name={name} /> */}
+
+      {/* Context Api */}
+      <Home />
     </section>
   );
 };

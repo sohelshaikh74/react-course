@@ -1,9 +1,24 @@
-const ComponentC = ({ name }) => {
+import { useContext } from "react";
+import { Data, Data1 } from "../contextApi/Home";
+
+const ComponentC = () => {
+  const userName = useContext(Data);
+  const userAge = useContext(Data1);
   return (
-    <div>
-      <h1>ComponentC</h1>
-      <p>{name}</p>
-    </div>
+    // {
+    //     (name)=>{
+    //         return (
+    //             <Data.Consumer>
+    //           {() => {
+    //             return (
+    //               <h1>
+    //                 My name is {name} and {}years old
+    //               </h1>
+    //             );
+    //           }}
+    //         </Data.Consumer>)
+    //     }
+    // }
   );
 };
 
