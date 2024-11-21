@@ -10,8 +10,10 @@
 // import Parent from "./components/props/Parent";
 // import Parent2 from "./components/props/Parent2";
 
+import UserContextProvider from "./components/context/UserContextProvider";
 import Home from "./components/contextApi/Home";
-import ComponentA from "./components/propsDriling/ComponentA";
+import Login from "./components/contextApi2/Login";
+import Profile from "./components/contextApi2/Profile";
 
 // import Pract from "./components/conditional-rendering/exercise/Pract";
 // import Button from "./components/events/Button";
@@ -213,7 +215,13 @@ const App = () => {
       {/* <ComponentA name={name} /> */}
 
       {/* Context Api */}
-      <Home />
+      {/* <Home /> */}
+
+      {/* Context API */}
+      <UserContextProvider>
+        <Login />
+        <Profile />
+      </UserContextProvider>
     </section>
   );
 };
