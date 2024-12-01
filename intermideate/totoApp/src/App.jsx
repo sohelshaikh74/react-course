@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+// App.jsx
+import { useState } from "react";
+import TodoList from "./components/TodoList";
+import "./App.css";
+// import TodoList from "./TodoList";
 
 const App = () => {
   // State to manage the list of tasks
@@ -15,6 +19,7 @@ const App = () => {
     const newTask = {
       id: Date.now(), // Unique ID for each task
       name: taskName,
+      completed: false, // Default task is not completed
     };
 
     setTasks([...tasks, newTask]);
@@ -45,6 +50,14 @@ const App = () => {
     setTasks(updatedTasks);
   };
 
+  // Toggle the completion of a task
+  const toggleCompletion = (id) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    );
+    setTasks(updatedTasks);
+  };
+
   return (
     <div className="App">
       <h1>Task Management</h1>
@@ -66,11 +79,13 @@ const App = () => {
       <h2>Tasks</h2>
       <ul>
         {tasks.map((task) => (
-          <li key={task.id}>
-            {task.name}
-            <button onClick={() => editTask(task)}>Edit</button>
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
-          </li>
+          <TodoList
+            key={task.id}
+            task={task}
+            editTask={editTask}
+            deleteTask={deleteTask}
+            toggleCompletion={toggleCompletion}
+          />
         ))}
       </ul>
     </div>
