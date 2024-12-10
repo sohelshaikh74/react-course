@@ -2,7 +2,6 @@
 import { useState } from "react";
 import TodoList from "./components/TodoList";
 import "./App.css";
-// import TodoList from "./TodoList";
 
 const App = () => {
   // State to manage the list of tasks
