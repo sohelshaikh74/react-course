@@ -10,16 +10,16 @@
 // import Parent from "./components/props/Parent";
 // import Parent2 from "./components/props/Parent2";
 
-import UserContextProvider from "./components/context/UserContextProvider";
-import Home from "./components/contextApi/Home";
-import Login from "./components/contextApi2/Login";
-import Profile from "./components/contextApi2/Profile";
-import UpdateUser from "./components/contextApi2/UpdateUser";
-import UserProfile from "./components/contextApi2/UserProfile";
-import {
-  UserContext,
-  UserProvider,
-} from "./components/ContextApiExercise/Usercontext";
+// import UserContextProvider from "./components/context/UserContextProvider";
+// import Home from "./components/contextApi/Home";
+// import Login from "./components/contextApi2/Login";
+// import Profile from "./components/contextApi2/Profile";
+// import UpdateUser from "./components/contextApi2/UpdateUser";
+// import UserProfile from "./components/contextApi2/UserProfile";
+// import {
+//   UserContext,
+//   UserProvider,
+// } from "./components/ContextApiExercise/Usercontext";
 
 // import Pract from "./components/conditional-rendering/exercise/Pract";
 // import Button from "./components/events/Button";
@@ -230,10 +230,10 @@ const App = () => {
       </UserContextProvider> */}
 
       {/* ContextApi Practice */}
-      <UserProvider>
+      {/* <UserProvider>
         <UserProfile />
         <UpdateUser />
-      </UserProvider>
+      </UserProvider> */}
     </section>
   );
 };
