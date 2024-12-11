@@ -10,6 +10,8 @@
 // import Parent from "./components/props/Parent";
 // import Parent2 from "./components/props/Parent2";
 
+import Parent from "./components/Parent";
+
 // import UserContextProvider from "./components/context/UserContextProvider";
 // import Home from "./components/contextApi/Home";
 // import Login from "./components/contextApi2/Login";
@@ -234,6 +236,9 @@ const App = () => {
         <UserProfile />
         <UpdateUser />
       </UserProvider> */}
+
+      {/* pracitce */}
+      <Parent />
     </section>
   );
 };
