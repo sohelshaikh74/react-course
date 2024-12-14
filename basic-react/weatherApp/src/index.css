@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app{
+  height: 100vh;
+  display: grid;
+  background: #e2d4ff;
+}
+.weather-icon{
+  width: 150px;
+  margin: 30px 0;
+}
+.temperature{
+  color: #fff;
+  font-size: 80px;
+  line-height: 1;
+}
+.location{
+  color: #fff;
+  font-size: 40px;
+}
+.weather-data{
+  width: 100%;
+  margin-top: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.weather-data .col{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 22px;
+}
+.weather-data .col span{
+  display: block;
+  font-size: 16px;
+}
+.weather-data .col img{
+  width: 26px;
+  margin-top: 10px;
+}
+.error{
+  margin-top: 20px;
+  font-size: 18px;
+  color:white;
+}
