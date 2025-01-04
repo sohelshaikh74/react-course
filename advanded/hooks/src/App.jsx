@@ -1,6 +1,8 @@
 // import { useState } from "react";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import First from "./components/useCallback hook/Home";
+import Home from "./components/useCallback hook/Home";
 
 // const App = () => {
 //   // let counter = useState(0);
@@ -160,26 +162,38 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 // ============= useMemo hook ============
 
+// const App = () => {
+//   const [number, setNumber] = useState(0);
+//   const [counter, setCounter] = useState(0);
+//   const cubeNum = (num) => {
+//     console.log("Calculation is Done");
+//     return Math.pow(num, 3);
+//   };
+//   const result = useMemo(() => cubeNum(number), [number]);
+//   return (
+//     <div>
+//       <input
+//         type="text"
+//         onChange={(e) => setNumber(e.target.value)}
+//         value={number}
+//       />
+//       <h1>Cube of the number: {result}</h1>
+//       <button onClick={() => setCounter((prev) => prev + 1)}>
+//         Increase by +1
+//       </button>
+//       <h2>{counter}</h2>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// ===================useCallback in another componetns==========
+
 const App = () => {
-  const [number, setNumber] = useState(0);
-  const [counter, setCounter] = useState(0);
-  const cubeNum = (num) => {
-    console.log("Calculation is Done");
-    return Math.pow(num, 3);
-  };
-  const result = useMemo(() => cubeNum(number), [number]);
   return (
     <div>
-      <input
-        type="text"
-        onChange={(e) => setNumber(e.target.value)}
-        value={number}
-      />
-      <h1>Cube of the number: {result}</h1>
-      <button onClick={() => setCounter((prev) => prev + 1)}>
-        Increase by +1
-      </button>
-      <h2>{counter}</h2>
+      <Home />
     </div>
   );
 };
