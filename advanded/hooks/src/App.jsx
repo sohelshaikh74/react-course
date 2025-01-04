@@ -1,6 +1,6 @@
 // import { useState } from "react";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 // const App = () => {
 //   // let counter = useState(0);
@@ -141,17 +141,45 @@ import { useEffect, useRef, useState } from "react";
 
 // another example of useRef() hook
 
+// const App = () => {
+//   const inputElem = useRef();
+//   // console.log(inputElem);
+//   const btnClick = () => {
+//     console.log(inputElem.current);
+//     inputElem.current.style.background = "red";
+//   };
+//   return (
+//     <div>
+//       <input type="text" ref={inputElem} />
+//       <button onClick={btnClick}>Click Here</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// ============= useMemo hook ============
+
 const App = () => {
-  const inputElem = useRef();
-  // console.log(inputElem);
-  const btnClick = () => {
-    console.log(inputElem.current);
-    inputElem.current.style.background = "red";
+  const [number, setNumber] = useState(0);
+  const [counter, setCounter] = useState(0);
+  const cubeNum = (num) => {
+    console.log("Calculation is Done");
+    return Math.pow(num, 3);
   };
+  const result = useMemo(() => cubeNum(number), [number]);
   return (
     <div>
-      <input type="text" ref={inputElem} />
-      <button onClick={btnClick}>Click Here</button>
+      <input
+        type="text"
+        onChange={(e) => setNumber(e.target.value)}
+        value={number}
+      />
+      <h1>Cube of the number: {result}</h1>
+      <button onClick={() => setCounter((prev) => prev + 1)}>
+        Increase by +1
+      </button>
+      <h2>{counter}</h2>
     </div>
   );
 };
