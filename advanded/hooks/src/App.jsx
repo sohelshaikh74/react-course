@@ -1,6 +1,6 @@
 // import { useState } from "react";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // const App = () => {
 //   // let counter = useState(0);
@@ -67,22 +67,91 @@ import { useState } from "react";
 
 // updating state based on previous state
 
+// const App = () => {
+//   const [count, setCount] = useState(0);
+//   const increaseCount = () => {
+//     // setCount(count + 1);
+//     // setCount(count + 1);
+//     // setCount(count + 1);
+//     // setCount(count + 1);
+//     setCount((prev) => prev + 4);
+//     setCount((prev) => prev + 4);
+//     setCount((prev) => prev + 4);
+//     setCount((prev) => prev + 4);
+//   };
+//   return (
+//     <div>
+//       <h1>Count:{count}</h1>
+//       <button onClick={increaseCount}>Increase By 4</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// ================ USEEFFECT HOOK =====================
+// import { useEffect } from "react";
+// const App = () => {
+//   // useEffect(()=>{})
+//   // useEffect(() => {}, []);
+//   // useEffect(()=>{},[data])
+
+//   const [counter, setCounter] = useState(0);
+//   useEffect(() => {
+//     setTimeout(() => {
+//       setCounter((prev) => prev + 1);
+//     }, 2000);
+//   }, [counter]); //when we use useEffect() hook without dependency whenever any state change in component it will execute funtion
+//   // if we use [] dependency then it will execute only onec
+//   return (
+//     <div>
+//       <h1>I have renderd {counter} times!</h1>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// ================ USEREF ============
+
+// const App = () => {
+//   const [value, setValue] = useState(0);
+//   // const [count, setCount] = useState(0);
+//   // useEffect(() => {
+//   //   // setCount((prev) => prev + 1);
+//   // });
+
+//   const count = useRef(0);
+//   console.log(count);
+//   useEffect(() => {
+//     count.current = count.current + 1;
+//   });
+
+//   return (
+//     <div>
+//       <button onClick={() => setValue((prev) => prev - 1)}>-1</button>
+//       <h1>{value}</h1>
+//       <button onClick={() => setValue((prev) => prev + 1)}>+1</button>
+//       <h1>Render Count:{count.current}</h1>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// another example of useRef() hook
+
 const App = () => {
-  const [count, setCount] = useState(0);
-  const increaseCount = () => {
-    // setCount(count + 1);
-    // setCount(count + 1);
-    // setCount(count + 1);
-    // setCount(count + 1);
-    setCount((prev) => prev + 4);
-    setCount((prev) => prev + 4);
-    setCount((prev) => prev + 4);
-    setCount((prev) => prev + 4);
+  const inputElem = useRef();
+  // console.log(inputElem);
+  const btnClick = () => {
+    console.log(inputElem.current);
+    inputElem.current.style.background = "red";
   };
   return (
     <div>
-      <h1>Count:{count}</h1>
-      <button onClick={increaseCount}>Increase By 4</button>
+      <input type="text" ref={inputElem} />
+      <button onClick={btnClick}>Click Here</button>
     </div>
   );
 };
