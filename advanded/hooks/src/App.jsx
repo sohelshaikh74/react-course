@@ -1,8 +1,10 @@
 // import { useState } from "react";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import First from "./components/useCallback hook/Home";
+// import First from "./components/useCallback hook/Home";
 import Home from "./components/useCallback hook/Home";
+import Profile from "./components/Profile";
+import Footer from "./components/Footer";
 
 // const App = () => {
 //   // let counter = useState(0);
@@ -190,10 +192,20 @@ import Home from "./components/useCallback hook/Home";
 
 // ===================useCallback in another componetns==========
 
+// const App = () => {
+//   return <div>{/* <Home /> */}</div>;
+// };
+
+// export default App;
+
+// =============== useContext Hook ==========
+
 const App = () => {
   return (
-    <div>
-      <Home />
+    <div className="app">
+      <h1>App</h1>
+      <Profile />
+      <Footer />
     </div>
   );
 };

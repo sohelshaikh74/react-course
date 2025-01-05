@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app{
+    background-color: #e2e223;
+    border: 2px solid black;
+    padding: 20px;
+}
+.profile{
+    background-color: antiquewhite;
+    border: 2px solid brown;
+    margin-left: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.footer{
+    background-color: aquamarine;
+    border: 2px solid forestgreen;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 20px;
+
+}
+.contact{
+    background-color: lightseagreen;
+    border: 2px solid blueviolet;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 20px;
+
+}
