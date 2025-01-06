@@ -5,6 +5,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Home from "./components/useCallback hook/Home";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
+import { useReducer } from "react";
+import useLocalStorage from "./components/useLocalStorage";
 
 // const App = () => {
 //   // let counter = useState(0);
@@ -200,12 +202,57 @@ import Footer from "./components/Footer";
 
 // =============== useContext Hook ==========
 
+// const App = () => {
+//   return (
+//     <div className="app">
+//       <h1>App</h1>
+//       <Profile />
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// ================ useReducer Hook =================
+
+// const App = () => {
+//   const intialState = { count: 0 };
+//   const reducer = (state, action) => {
+//     return { count: state.count + 1 };
+//   };
+//   const [state, dispatch] = useReducer(reducer, intialState);
+//   // const [count, setCount] = useState(0);
+//   return (
+//     <div>
+//       <h1>{state.count}</h1>
+//       <button onClick={() => dispatch((prev) => prev + 1)}>Increase</button>
+//       <button onClick={() => dispatch((prev) => prev - 1)}>Descrese</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// ===================== CUSTOME HOOK===============
+
 const App = () => {
+  // const [name, setName] = useState(
+  //   localStorage.getItem("username") ? localStorage.getItem("username") : ""
+  // );
+  // useEffect(() => {
+  //   localStorage.setItem("username", name);
+  // }, [name]);
+  const [name, setName] = useLocalStorage("username", "");
   return (
-    <div className="app">
-      <h1>App</h1>
-      <Profile />
-      <Footer />
+    <div>
+      <input
+        type="text"
+        placeholder="enter your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <h2>Hello, {name}!</h2>
     </div>
   );
 };
